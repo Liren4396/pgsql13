@@ -1,0 +1,22 @@
+# COMP3311 20T3 Final Exam Q11
+
+(a)
+RES=Sel[true]R
+
+
+(b)
+RES(a,b)=Sel[c<0]R
+
+
+(c)
+RES(a,d)=Sel[c<0](R join[b=e] S)
+
+
+(d)
+Tmp1 = R Join T
+Tmp2 = Tmp1 Join S
+Res  = Proj[b,c,e,f]Tmp2
+or
+Tmp(a,b,c,d,f) = R Join T
+Res(b,c,e,f) = Tmp Join S
+

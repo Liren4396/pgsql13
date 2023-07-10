@@ -1,0 +1,57 @@
+# COMP3311 20T3 Final Exam Q9
+
+(a)
+create or replace function q9a() returns trigger
+as $$
+declare
+	nmembers integer;
+begin
+	select count(performer) into nmembers
+	from   MemberOf
+	where  in_group = new.in_group and departed is null;
+	if (nmembers = 0) then
+		update Groups
+		set    disbanded = new.departed
+		where  id = old.in_group;
+	end if;
+	return new;   -- not needed
+end;
+$$ language plpgsql;
+
+create or replace trigger q9a
+after update of departed on MemberOf
+for each row execute procedure q9a();
+
+
+(b)
+
+create or replace function q9b returns trigger
+as $$
+declare
+	newID integer;
+begin
+	update Groups
+	set    disbanded = current_date
+	where  id = old.id;
+	newID := newGroupID();
+    insert into Groups (id,name,formed,disbanded)
+	values (newID, new.name, current_date, null);
+	for m in
+		select * from MembersOf
+		where in_group = old.id and departed is null
+	loop
+		update MemberOf set departed = current_date
+		where  in_group = old.id and performer = m.performer;
+		insert into MemberOf(in_group,performer,joined, departed)
+		values (newID, m.performer, current_date, null);
+	end loop
+	return new;   -- not needed
+end;
+$$ language plpgsql;
+
+
+create or replace trigger q9b
+after update of name on Groups
+for each row execute procedure q9b();
+
+

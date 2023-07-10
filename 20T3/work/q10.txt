@@ -1,0 +1,14 @@
+# COMP3311 20T3 Final Exam Q10
+
+(a)
+fid->from, to, distance, departs, arrives, price
+aid->aname,range 
+eid->ename,salary
+
+from, to->distance
+(b)
+from, to->distance violates BCNF
+make new table Route(from, to, distance)
+change table Flights(fid, from, to, departs, arrives, price)
+
+

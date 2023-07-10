@@ -1,0 +1,55 @@
+# COMP3311 20T3 Final Exam Q8
+
+(a)
+create table U (
+	id          serial,
+	a           integer,
+    b           text,
+	primary key (id)
+);
+create table m (
+    u integer,
+	content text,
+	primary key (u, content),
+    foreign key (recipe) references Recipes(id)
+);
+
+
+
+(b)
+create table S (
+	id          serial,
+    r           integer references T(id),
+	primary key (id),
+);
+
+
+create table T (
+	id          serial,
+    c           text,
+	primary key (id)
+);
+
+
+(c)
+create table P (
+	id          serial,
+	e           text,
+	primary key (id)
+);
+create table Q1 (
+	f           integer not null,
+    p           integer references P(id),
+	primary key (f)
+);
+
+create table Q2 (
+    p           integer references P(id),
+	primary key (p)
+);
+
+create table Q3 (
+	p       integer references P(id),
+	g       integer not null,
+	primary key (p)
+);

@@ -1,0 +1,22 @@
+# COMP3311 20T3 Final Exam Q12
+
+(a)
+Conflict on X, T2 -> T1
+Conflict on X, T1 -> T2, T1-> T3, T2 -> T3
+
+Cycle in precedence graph
+=> not conflict serializable
+
+
+(b)
+Consider serial schedule T2;T1;T3
+
+For X
+- nobody does initial read
+- T3 does the final write
+For Y
+- T2 does initial read
+- T1 does final write
+
+The concurrent schedule has the same properties
+=> view serializable
