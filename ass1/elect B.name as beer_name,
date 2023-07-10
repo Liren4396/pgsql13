@@ -1,0 +1,154 @@
+ id  |               name               | min_abv | max_abv 
+-----+----------------------------------+---------+---------
+ 256 | Ale                              |       4 |       7
+ 253 | Amber Ale                        |       4 |       5
+ 271 | Amber IPA                        |       5 |       7
+ 317 | Amber Lager                      |       4 |       6
+ 379 | American Brown Ale               |       4 |       6
+ 290 | American IPA                     |       5 |       7
+ 323 | American Pale Ale                |       4 |       6
+ 359 | American Stout                   |       5 |       7
+ 358 | Australian IPA                   |       5 |       7
+ 247 | Baltic Porter                    |       6 |      12
+ 235 | Barley Wine                      |       9 |      14
+ 319 | Belgian Ale                      |       6 |      11
+ 374 | Belgian Golden Ale               |       5 |       7
+ 347 | Belgian Imperial Stout           |      10 |      12
+ 352 | Belgian Pale Ale                 |       5 |       7
+ 345 | Belgian Quadrupel                |       9 |      11
+ 332 | Biere de Garde Noir              |       5 |       7
+ 384 | Black Double IPA                 |       9 |      11
+ 267 | Black IPA                        |       6 |      14
+ 308 | Black Imperial IPA               |      10 |      12
+ 279 | Brown Ale                        |       4 |       6
+ 386 | Brown IPA                        |       8 |      10
+ 265 | Brown Sour                       |       5 |       7
+ 344 | Brune                            |       7 |       9
+ 377 | Brut IPA                         |       5 |       7
+ 327 | Cider                            |       3 |       5
+ 385 | Cloudy Cider                     |       9 |      11
+ 360 | Creamy IPA                       |       5 |       7
+ 316 | Cryo IPA                         |       6 |       8
+ 292 | Dark Ale                         |       5 |      10
+ 246 | Dark Farmhouse Ale               |       4 |       6
+ 274 | Dark IPA                         |       7 |      13
+ 275 | Dark Lager                       |       4 |       6
+ 355 | Doppelbock                       |      13 |      15
+ 240 | Double IPA                       |       7 |      12
+ 261 | Double NEIPA                     |       7 |       9
+ 302 | Double Oat Cream IPA             |       6 |       8
+ 272 | Double Red Ale                   |       9 |      11
+ 268 | Double Red IPA                   |       7 |      10
+ 243 | Double Stout                     |       7 |       9
+ 300 | Dry Hazy IPA                     |       5 |       7
+ 338 | Dunkel Weissbier                 |       6 |       8
+ 306 | Eisbock                          |      32 |      55
+ 307 | English Bitter                   |       4 |       6
+ 270 | Extra Belgian Ale                |       5 |       7
+ 373 | Extra IPA                        |       6 |       8
+ 251 | Flanders Red Ale                 |       5 |       7
+ 312 | Flemish Red Ale                  |       4 |       6
+ 376 | Golden Ale                       |       5 |       7
+ 328 | Gose                             |       3 |       5
+ 245 | Hazy Double IPA                  |       7 |      11
+ 238 | Hazy IPA                         |       4 |       9
+ 380 | Hazy Imperial IPA                |       7 |       9
+ 263 | Hazy Pale Ale                    |       4 |       6
+ 285 | Hazy Triple IPA                  |      10 |      12
+ 311 | Hopfenweisse                     |       4 |       6
+ 325 | Hoppy Pilsener                   |       4 |       6
+ 241 | IPA                              |       4 |       9
+ 381 | Ice Cream Cake IPA               |       5 |       7
+ 299 | Imperial Dark Ale                |       8 |      10
+ 277 | Imperial Fruited Sour            |       7 |       9
+ 288 | Imperial Hazy IPA                |       8 |      10
+ 305 | Imperial Hefeweizen              |       6 |       8
+ 276 | Imperial IPA                     |       8 |      41
+ 310 | Imperial IRA                     |       7 |       9
+ 382 | Imperial Milk Stout              |      11 |      13
+ 368 | Imperial NEIPA                   |       9 |      11
+ 339 | Imperial Pastry Stout            |       9 |      11
+ 346 | Imperial Pilsener                |       7 |       9
+ 237 | Imperial Porter                  |       9 |      13
+ 329 | Imperial Red Ale                 |       8 |       9
+ 242 | Imperial Red IPA                 |       6 |      13
+ 331 | Imperial Rye Stout               |      17 |      19
+ 341 | Imperial Smoothie Sour           |       6 |       8
+ 291 | Imperial Sour                    |       6 |       8
+ 244 | Imperial Stout                   |       7 |      18
+ 350 | Imperial Stout + Quadrupel blend |      10 |      12
+ 298 | Imperial Thickshake IPA          |       9 |      11
+ 303 | India Brown Ale                  |       6 |       8
+ 378 | Kettle Sour                      |       3 |       5
+ 315 | Kettle soured Double IPA         |       7 |       9
+ 236 | Lager                            |       4 |       6
+ 375 | London Porter                    |       4 |       6
+ 342 | Maibock                          |       6 |       8
+ 284 | Malt Liquor                      |       6 |       8
+ 369 | Margarita                        |       6 |       8
+ 340 | Marzen                           |       5 |       7
+ 281 | Milk Stout                       |       5 |       8
+ 333 | Milkshake IPA                    |       6 |      11
+ 249 | NEIPA                            |       5 |       9
+ 365 | NEPA                             |       5 |       7
+ 383 | New World IPA                    |       6 |       8
+ 318 | New World Lager                  |       3 |       5
+ 283 | Non-alcoholic                    |       4 |       6
+ 257 | Oat Cream IPA                    |       5 |      10
+ 322 | Oat Cream NEIPA                  |       6 |       8
+ 278 | Oatmeal Stout                    |       6 |       9
+ 343 | Old Ale                          |       6 |      10
+ 260 | Pale Ale                         |       4 |       7
+ 282 | Pale Lager                       |       4 |       6
+ 259 | Pastry Stout                     |       6 |      14
+ 266 | Pilsener                         |       4 |       5
+ 286 | Porter                           |       5 |       9
+ 273 | Purple Carrot Ale                |       6 |       8
+ 320 | Quadrupel                        |      10 |      12
+ 371 | Quadrupel Ale                    |       9 |      11
+ 309 | Quintuple IPA                    |      17 |      19
+ 248 | Rauchbier                        |       5 |       9
+ 287 | Red Ale                          |       5 |       7
+ 255 | Red Biere de Garde               |       6 |       8
+ 330 | Red Double IPA                   |       7 |       9
+ 254 | Red IPA                          |       5 |       8
+ 353 | Red Rye IPA                      |       4 |       6
+ 262 | Russian Imperial Stout           |      10 |      14
+ 280 | Rustic Brown                     |       7 |       9
+ 354 | Rye Beer                         |       4 |       6
+ 351 | Rye IPA                          |       5 |       7
+ 349 | Rye Imperial Stout               |      11 |      13
+ 304 | Saison                           |       3 |       8
+ 357 | Scotch Ale                       |       5 |       7
+ 356 | Session Hazy IPA                 |       3 |       5
+ 269 | Session IPA                      |       4 |       5
+ 335 | Smoked Berliner Gose             |       7 |       9
+ 297 | Smoked Porter                    |       5 |       7
+ 258 | Sour                             |       2 |       7
+ 367 | Sour Ale                         |       5 |       7
+ 362 | Sour Blonde Ale                  |       5 |       7
+ 301 | Sour Flemish Ale                 |       6 |       8
+ 289 | Sour Hazy IPA                    |       6 |       8
+ 363 | Sour Red IPA                     |       4 |       6
+ 250 | Stout                            |       5 |       9
+ 239 | Strong Ale                       |       6 |      13
+ 294 | Strong Dark Ale                  |       8 |      10
+ 295 | Strong Fruit Beer                |       7 |       9
+ 296 | Strong Pale Ale                  |       7 |       9
+ 348 | Strong Stout                     |       8 |      10
+ 366 | Super Sour                       |       8 |      10
+ 334 | Tripel                           |       8 |      10
+ 326 | Triple IPA                       |       9 |      12
+ 314 | Triple NEIPA                     |       9 |      11
+ 324 | Tropical Brut IPA                |       5 |       7
+ 337 | Vanilla Ice Cream Ale            |       7 |       8
+ 370 | Vermont IPA                      |       7 |       9
+ 364 | Wee Heavy                        |       8 |      10
+ 252 | West Coast IPA                   |       6 |       9
+ 321 | Wheat Ale                        |       4 |       6
+ 361 | White IPA                        |       4 |       6
+ 313 | Wild Ale                         |       4 |       6
+ 336 | Wit Bier                         |       4 |       6
+ 264 | XPA                              |       4 |       6
+(150 rows)
+

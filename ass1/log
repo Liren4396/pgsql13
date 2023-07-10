@@ -1,0 +1,66 @@
+SET
+SET
+SET
+SET
+SET
+ set_config 
+------------
+ 
+(1 row)
+
+SET
+SET
+SET
+SET
+psql:ass1.dump:24: ERROR:  type "abvvalue" already exists
+psql:ass1.dump:36: ERROR:  type "containertype" already exists
+psql:ass1.dump:44: ERROR:  type "ibuvalue" already exists
+psql:ass1.dump:55: ERROR:  type "ingredienttype" already exists
+psql:ass1.dump:63: ERROR:  type "milliliters" already exists
+psql:ass1.dump:73: ERROR:  type "populationrecord" already exists
+psql:ass1.dump:81: ERROR:  type "urlvalue" already exists
+psql:ass1.dump:89: ERROR:  type "yearvalue" already exists
+psql:ass1.dump:114: ERROR:  function "dbpop" already exists with same argument types
+SET
+SET
+psql:ass1.dump:137: ERROR:  relation "beers" already exists
+psql:ass1.dump:147: ERROR:  relation "brewed_by" already exists
+psql:ass1.dump:160: ERROR:  relation "breweries" already exists
+psql:ass1.dump:170: ERROR:  relation "contains" already exists
+psql:ass1.dump:181: ERROR:  relation "ingredients" already exists
+psql:ass1.dump:194: ERROR:  relation "locations" already exists
+psql:ass1.dump:207: ERROR:  relation "styles" already exists
+psql:ass1.dump:993: ERROR:  duplicate key value violates unique constraint "beers_pkey"
+DETAIL:  Key (id)=(346) already exists.
+CONTEXT:  COPY beers, line 1
+psql:ass1.dump:1804: ERROR:  duplicate key value violates unique constraint "brewed_by_pkey"
+DETAIL:  Key (beer, brewery)=(346, 164) already exists.
+CONTEXT:  COPY brewed_by, line 1
+psql:ass1.dump:2059: ERROR:  duplicate key value violates unique constraint "breweries_pkey"
+DETAIL:  Key (id)=(2) already exists.
+CONTEXT:  COPY breweries, line 1
+psql:ass1.dump:2735: ERROR:  duplicate key value violates unique constraint "contains_pkey"
+DETAIL:  Key (beer, ingredient)=(351, 124) already exists.
+CONTEXT:  COPY contains, line 1
+psql:ass1.dump:2972: ERROR:  duplicate key value violates unique constraint "ingredients_pkey"
+DETAIL:  Key (id)=(121) already exists.
+CONTEXT:  COPY ingredients, line 1
+psql:ass1.dump:3196: ERROR:  duplicate key value violates unique constraint "locations_pkey"
+DETAIL:  Key (id)=(2) already exists.
+CONTEXT:  COPY locations, line 1
+psql:ass1.dump:3354: ERROR:  duplicate key value violates unique constraint "styles_pkey"
+DETAIL:  Key (id)=(236) already exists.
+CONTEXT:  COPY styles, line 1
+psql:ass1.dump:3362: ERROR:  multiple primary keys for table "beers" are not allowed
+psql:ass1.dump:3370: ERROR:  multiple primary keys for table "brewed_by" are not allowed
+psql:ass1.dump:3378: ERROR:  multiple primary keys for table "breweries" are not allowed
+psql:ass1.dump:3386: ERROR:  multiple primary keys for table "contains" are not allowed
+psql:ass1.dump:3394: ERROR:  multiple primary keys for table "ingredients" are not allowed
+psql:ass1.dump:3402: ERROR:  multiple primary keys for table "locations" are not allowed
+psql:ass1.dump:3410: ERROR:  multiple primary keys for table "styles" are not allowed
+psql:ass1.dump:3418: ERROR:  constraint "beers_style_fkey" for relation "beers" already exists
+psql:ass1.dump:3426: ERROR:  constraint "brewed_by_beer_fkey" for relation "brewed_by" already exists
+psql:ass1.dump:3434: ERROR:  constraint "brewed_by_brewery_fkey" for relation "brewed_by" already exists
+psql:ass1.dump:3442: ERROR:  constraint "breweries_located_in_fkey" for relation "breweries" already exists
+psql:ass1.dump:3450: ERROR:  constraint "contains_beer_fkey" for relation "contains" already exists
+psql:ass1.dump:3458: ERROR:  constraint "contains_ingredient_fkey" for relation "contains" already exists
