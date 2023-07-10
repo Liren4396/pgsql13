@@ -1,0 +1,10 @@
+2022-09-20 22:13:04.093 AEST [2377753] LOG:  starting PostgreSQL 13.8 on x86_64-pc-linux-gnu, compiled by gcc (Debian 10.2.1-6) 10.2.1 20210110, 64-bit
+2022-09-20 22:13:04.094 AEST [2377753] LOG:  listening on IPv4 address "127.0.0.1", port 5432
+2022-09-20 22:13:04.105 AEST [2377753] LOG:  listening on Unix socket "/tmp/.s.PGSQL.5432"
+2022-09-20 22:13:04.174 AEST [2377754] LOG:  database system was shut down at 2022-09-20 22:12:42 AEST
+2022-09-20 22:13:04.247 AEST [2377753] LOG:  database system is ready to accept connections
+2022-09-20 22:14:08.981 AEST [2377753] LOG:  received fast shutdown request
+2022-09-20 22:14:08.998 AEST [2377753] LOG:  aborting any active transactions
+2022-09-20 22:14:09.004 AEST [2377753] LOG:  background worker "logical replication launcher" (PID 2377760) exited with exit code 1
+2022-09-20 22:14:09.011 AEST [2377755] LOG:  shutting down
+2022-09-20 22:14:09.211 AEST [2377753] LOG:  database system is shut down
