@@ -1,0 +1,73 @@
+#!/usr/bin/python3
+
+# COMP3311 22T3 Assignment 2
+# Print a list of character roles played by an actor/actress
+
+import sys
+import psycopg2
+import helpers
+
+### Globals
+
+db = psycopg2.connect("dbname=ass2")
+usage = f"Usage: {sys.argv[0]} FullName"
+
+### Command-line args
+
+if len(sys.argv) < 2:
+   print(usage)
+   exit(1)
+
+# process the command-line args ...
+
+### Queries
+
+query = f'''
+select name, job, role, title, year, people.id from people
+left join principals on people.id = principals.person
+left join movies on principals.movie = movies.id
+left join playsrole on playsrole.inmovie = principals.id
+order by year, title, role
+;
+'''
+
+### Manipulating database
+
+try:
+   # your code goes here
+   cur1 = db.cursor()
+   cur1.execute(query)
+
+   
+   person = []
+   count = 1
+   for t in cur1.fetchall():
+      if t[5] not in person and t[0] == sys.argv[1]:
+         person.append(t[5])
+   if len(person) == 0:
+      print("No such person")
+      exit(0)
+   for i in person:
+      if (len(person) > 1):
+         print(sys.argv[1], f'#{count}')
+      cur2 = db.cursor()
+      cur2.execute(query)
+      count_person = 0
+      count_job = 0
+      for t in cur2.fetchall():
+         if t[0] == sys.argv[1] and t[5] == i:
+            count_person += 1
+            if t[1] == 'actor' or t[1] == 'actress' or t[1] == 'self':
+               count_job += 1
+               print(t[2], 'in', t[3], f"({t[4]})")
+      if count_person == 0:
+         print("No such person")
+      elif count_person != 0 and count_job == 0:
+         print("No acting roles")
+      count += 1
+except Exception as err:
+   print("DB error: ", err)
+finally:
+   if db:
+      db.close()
+
