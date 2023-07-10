@@ -1,0 +1,26 @@
+# COMP3311 22T3 Final Exam Q8
+# Python/Psycopg2 analysis
+
+(A)
+first calculate the student's term by inputing the student's zid code and then 
+for each term print on the screen and find this student's learnt course--code,title,uoc,and its mark nd finally print them on the screen by the calculating
+tot1 = tot1 + uoc
+tot2 = tot2 + mark*uoc
+
+
+(B)
+if c.title is none or c.mark is none
+
+
+(C)
+11 time
+
+
+(D)
+"""
+select distince term, c.code, c.title, c.uoc, e.mark
+from   Enrolments e join Courses c on c.id = e.course
+where  term = %s and student = %s order by term
+"""
+
+

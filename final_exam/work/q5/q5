@@ -1,0 +1,71 @@
+#!/usr/bin/python3
+
+import sys
+import psycopg2
+import re
+
+# Helper functions (if any)
+
+# ... functions go here ...
+
+# Initial setup
+
+db = psycopg2.connect("dbname=racing")
+cur = db.cursor()
+
+if len(sys.argv) < 3:
+   print(f"Usage: {sys.argv[0]} Racecourse Date")
+   exit(1)
+track = sys.argv[1]
+date = sys.argv[2]
+query = '''
+select racecourses.name, meetings.run_on, races.name, races.prize, races.length, horses.name, jockeys.name, runners.finished from horses, runners, jockeys, races,meetings, racecourses where runners.horse = horses.id and runners.race = races.id and runners.jockey = jockeys.id and races.part_of = meetings.id and racecourses.id = meetings.run_at order by racecourses.name, meetings.run_on,races.prize,races.distanec, races.name,  runners.finished;
+
+'''
+validDate = re.compile("^\d{4}-\d{2}-\d{2}$")
+if not validDate.match(date):
+   print(f"Invalid date")
+   exit(1)
+
+try:
+   # ... python code goes here ...
+   cur.execute(query)
+   race_name = ''
+   count_race = 0
+   count_meeting = 0
+   flag = 0
+   for t in cur.fetchall():
+   	if t[0] == track:
+   		count_race += 1
+   		if str(t[1]) == date:
+   			count_meeting += 1
+   			if flag == 0:
+	   			print(f"Race meeting at {track} on {date}");
+	   			print("")
+	   			flag = 1
+	   		if race_name != '' and race_name != t[3]:
+	   			print("")
+	   		if race_name != t[3]:
+	   			race_name = t[3]
+	   			print(f"{t[2]}, prize pool ${t[3]}, run over {t[4]}m")
+	   		prize = 0;
+	   		if t[7] == 1:
+	   			prize = int(t[3] * 0.7)
+	   		if t[7] == 2:
+	   			prize = int(t[3] * 0.2)
+	   		if t[7] == 3:
+	   			prize = int(t[3] * 0.1)
+	   		if prize != 0:
+	   			print(f"{t[5]} ridden by {t[6]} wins ${prize}")
+   if count_race == 0:
+   	print("No such racecourse")
+   elif count_meeting == 0:
+   	print("No such meeting")
+   		
+except psycopg2.Error as err:
+   print("DB error: ", err)
+finally:
+   if db:
+      db.close()
+   if cur:
+       cur.close()

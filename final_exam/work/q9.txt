@@ -1,0 +1,21 @@
+# COMP3311 22T3 Final Exam Q9
+# Serializabilty and Locking
+
+
+(A)
+No
+cycle not in precedence graph
+
+(B)
+No
+
+
+(C)
+
+
+
+(D)
+
+
+
+
